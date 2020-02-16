@@ -3,3 +3,6 @@ All my submissions to assignments in CS387 - Database and Information Systems La
 
 ## Assignment 1 : 
   Node stuff and browser-server bidirectional database access
+
+## Assignment 2 :
+  Django models
