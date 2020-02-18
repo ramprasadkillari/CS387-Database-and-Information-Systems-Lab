@@ -1,0 +1,44 @@
+ <input id="ideatxt" type="text">
+ <button id="addIdea" type="button" onclick="myFunction()">add Idea</button>
+ <ul id="idealist" style="list-style-type:square;">
+  
+</ul>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+        console.log( "document loaded" );
+        axios.get('http://localhost:8000/api/ideas/').then(resp => {
+    	var cnt = resp.data.length;
+    	for(var i=0;i<cnt;i++){
+    			var li = document.createElement("li");
+				li.appendChild(document.createTextNode(resp.data[i]['content']));
+			  	document.getElementById("idealist").appendChild(li);
+    		}
+		});
+
+
+    });
+
+function myFunction() {
+	
+
+	var idea = document.getElementById("ideatxt").value;
+	// document.getElementById("ideatxt").value = '';
+
+	axios.post('http://localhost:8000/api/ideas/',{content : idea}).then(resp => {
+    console.log(resp.data[1]);
+	});
+
+	var idea = document.getElementById("ideatxt").value;
+	var li = document.createElement("li");
+	li.appendChild(document.createTextNode(idea));
+  	document.getElementById("idealist").appendChild(li);
+
+  	document.getElementById("ideatxt").value = '';
+}
+</script>
+
+    
