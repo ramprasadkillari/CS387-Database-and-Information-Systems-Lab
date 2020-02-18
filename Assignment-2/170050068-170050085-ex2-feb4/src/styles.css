@@ -1,0 +1,11 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(18, 90px);
+  grid-template-rows: repeat(10, 86px);
+  align-content: center;
+}
+
+.cell {
+  text-align: center;
+  border: 1px solid black;
+}
