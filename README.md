@@ -5,7 +5,7 @@ All my submissions to assignments in CS387 - Database and Information Systems La
   Node stuff and browser-server bidirectional database access
 
 ## Assignment 2 :
-  Ex-1 : The Badlu Online store in Django and Postgres
+  Ex-1 : The Badlu Online store in Django and Postgres <br />
   Ex-2 : Interactive Periodic Table ( Sandbox ). Django Layout, Styling and dynamic UI.
 
 ## Assignment 3 :
